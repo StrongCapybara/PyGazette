@@ -1,7 +1,7 @@
 def retrieve(D,Q,K,S,SO,REM,R):
   import requests
-  api = "AIzaSyDb0lGYPJQ787jGi_hKgOZwjn0SX_bh--I"
-  sid = "b73f7ded225f84895"
+  api = "Insert your API Key"
+  sid = "Insert your Secret ID"
   url = f"https://www.googleapis.com/customsearch/v1?key={api}&cx={sid}&dateRestrict={D}&q={Q}&keywords={K}&start={S}&sort={SO}&num={REM}"
   data = requests.get(url).json()
   search_items = data.get("items")
