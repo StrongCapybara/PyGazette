@@ -19,7 +19,7 @@ def retrieve(D,Q,K,S,SO,REM,R):
 import requests
 
 query = input("Enter your search terms:")
-results = int(input("Enter the number of results that you want(<100):"))
+results = int(input("Enter the number of results that you want(≤100):"))
 date = "d"+input("Enter the number of days you want to restrict the search to:")
 keywords = input("Enter Keywords (at least 1):")
 sort = "date"
@@ -35,4 +35,6 @@ for i in range(0,quo):
  r_num = r_num + 10
 
 start = start + 10
-retrieve(date,query,keywords,start,sort,rem,r_num)
+
+if rem>0:
+ retrieve(date,query,keywords,start,sort,rem,r_num)
